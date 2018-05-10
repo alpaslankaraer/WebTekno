@@ -1,88 +1,134 @@
-var io   = require('socket.io'),
-    url  = require('url'),
-    express = require('express'),
-    http=require('http');
+var io = require('socket.io'),
+    url = require('url'),
+    http = require('http');
 
+var express = require('express');
 var app = express();
 var path = require('path');
 var server = http.createServer(app);
 var socket = io.listen(server);
 var bodyParser = require('body-parser');
+var https = require('https');
+//var hbs = require('express-handlebars');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/mydb', function(err) {
+    if (err) {
+        return console.log(err);
+    }
+    return console.log("Successfully connected to MongoDB!");
+});
+
+//var passport = require('passport');
+//var localStrategy = require('passport-local');
 
 
-app.engine('.html', require('ejs').__express);
-app.use(express.static(path.join(__dirname, 'public')));
+//var expressValidator = require('express-validator');
+var expressSession = require('express-session');
+var db = mongoose.connection;
+
+
+app.set("view engine","ejs");
 app.set('view engine', 'html');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(expressValidator());
+
+app.engine('.html', require('ejs').__express);
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(expressSession({
+    secret: 'max',
+    saveUninitialized: true,
+    resave: false
+}));
+
 
 //var MongoClient =require('mongodb').MongoClient,format = require('util').format;
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
-/*
-//MongoDB insert start
-MongoClient.connect(url,function (err,db) {
-    if (err) {
-        throw err;
-    }
-    var dbo = db.db("mydb");
-    var myobj = [
-        { username: "alp", password: "3232"},
-        { username: "berkay", password: "0606"},
-        { username: "ferhat", password: "1515"},
-        { username: "engin", password: "3030"}
-    ];
-    dbo.collection("users").insertMany(myobj, function(err, result) {
-        if (err) {
-            throw err;
-        }
-        console.log("Number of documents inserted: " + result.insertedCount);
-        db.close();
-    });
-});
-//MongoDB insert end
-*/
 
 
-
-app.get('/', function(req, res){
+app.get('/', function (req, res) {
     res.render('index');
 });
 
-//MongoDB find start
-app.post('/login', function(req, res){
-    var myUser = req.body.username_text; 
-    var myPass = req.body.password_text;
 
-    //console.log(myUser);
-    //console.log(myPass);//db baglantısı sorgu
+//MongoDB login start
+app.post('/login', function (req, res) {
+    var myMail = req.body.e_mail;
+    var myPass = req.body.password;
+    
 
-    MongoClient.connect('mongodb://localhost:27017', function(err1,db)
-    {
+    console.log(myMail);
+    console.log(myPass);//db baglantısı sorgu
+
+    MongoClient.connect('mongodb://localhost:27017', function (err1, db) {
         if (err1) {
             throw err1;
         }
         else {
             var dbo = db.db("mydb");
-            dbo.collection("users").find(/*{}, */{ username: myUser, password: myPass}).toArray(function(err, result) {     // *{}, bu kısmı kaldırınca düzeldi
-            if (err || result[0].password!=myPass || result[0].username!=myUser)        // array in hangi değeri olduğunu belirtmeyince obje olarak alıyor
-            {
-                //console.log(result);
-                console.log("WRONG USERNAME OR PASSWORD");
-            }
-            else {
-                console.log(result);
-                console.log("asfpjsdgşsfşakdşlafşk");
-            }
+            dbo.collection("users").find({ e_mail: myMail, password: myPass }).toArray(function (err, result) {     // *{}, bu kısmı kaldırınca düzeldi
+                if (result[0] != undefined) {
+                    if (result[0].password == myPass && result[0].e_mail == myMail)        // array in hangi değeri olduğunu belirtmeyince obje olarak alıyor
+                    {
+                        var myFirstName ={name:result[0].firstname} ;
+                        //console.log(result);
+                        req.session.e_mail = myMail;
+                        console.log(myFirstName);
+                        console.log("TRUEEE");
+                        res.send(myFirstName);
+                       
+                    }
+                } else {
+                    //console.log(result);
+                    console.log("fALSEEEEE");
+                    res.send("yanlış");
+                }
             });
         }
         db.close();
     });
-    
+});
+//MongoDB login end
+
+//MongoDB register end
+app.post('/signup', function (req, res) {
+
+    var myFirstName = req.body.firstname;
+    var myLastName = req.body.lastname;
+    var myMail = req.body.e_mail;
+    var myPass = req.body.password;
+
+    console.log(myFirstName);
+    console.log(myLastName);//db baglantısı sorg
+    console.log(myMail);
+    console.log(myPass);//db baglantısı sorg
+
+
+    MongoClient.connect(url, function (err, db) {
+        if (err) {
+            throw err;
+        }
+        var dbo = db.db("mydb");
+        var myobj = [
+            { firstname: myFirstName, lastname: myLastName, e_mail: myMail, password: myPass },
+        ];
+        dbo.collection("users").insertMany(myobj, function (err, result) {
+            if (err) {
+                throw err;
+            }
+            console.log("Number of documents inserted: " + result.insertedCount);
+            db.close();
+        });
+    });
+
     res.render('index');
 });
-//MongoDB find end
+//MongoDB register end
+
 
 app.listen(8888);
 console.log('server running ' + 'now ' + Date.now());

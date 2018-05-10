@@ -1,16 +1,19 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
+
+var myFirstName = req.body.firstname;
+var myLastName = req.body.lastname;
+var myMail = req.body.e_mail; 
+var myPass = req.body.password;
+
 MongoClient.connect(url,function (err,db) {
     if (err) {
         throw err;
     }
     var dbo = db.db("mydb");
     var myobj = [
-        { username: "alp", password: "3232"},
-        { username: "berkay", password: "0606"},
-        { username: "ferhat", password: "1515"},
-        { username: "engin", password: "3030"}
+        { firstname: myFirstName , lastname: myLastName, e_mail: myMail, password: myPass},
     ];
     dbo.collection("users").insertMany(myobj, function(err, result) {
         if (err) {

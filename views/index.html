@@ -2,6 +2,9 @@
 <html lang="zxx" class="no-js">
 
 <head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/webticker/jquery.webticker.min.js"></script>
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
@@ -19,6 +22,7 @@
 	<!-- Site Title -->
 	<title>CryptoCurrencies</title>
 
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 	<!--
 			CSS
@@ -31,7 +35,10 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
 </head>
 
 <body>
@@ -40,17 +47,14 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
-					<a href="index.html">
-						<img src="img/logo.png" alt="" title="" />
+					<a href="#home">
+						<img src="img/logo.png" alt="" title="Brand Logo" />
 					</a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
 						<li class="menu-active">
 							<a href="#home">Home</a>
-						</li>
-						<li>
-							<a href="#convert">Convert</a>
 						</li>
 						<li>
 							<a href="#feature">Feature</a>
@@ -62,7 +66,8 @@
 							<a href="#blog">Blog</a>
 						</li>
 						<li>
-							<a href="#login" onclick="document.getElementById('login').style.display='block'">Login</a>
+							<a id="buttonSignUp" href="#signup-login" onclick="document.getElementById('signup-login').style.display='block'" style="width:auto;">Signup/Login</a>
+							<a id="name" href="log-out"></a>
 						</li>
 					</ul>
 				</nav>
@@ -71,7 +76,9 @@
 		</div>
 	</header>
 	<!-- #header -->
-
+	
+	
+	
 	<!-- start banner Area -->
 	<section class="banner-area relative" id="home">
 		<div class="overlay overlay-bg"></div>
@@ -79,13 +86,12 @@
 			<div class="row fullscreen d-flex align-items-center justify-content-start">
 				<div class="banner-content col-lg-12 col-md-12">
 					<h5 class="text-white text-uppercase">Currently Purchase Rate</h5>
-					<h1 class="text-uppercase">
-						$6,999
+					<h1 class="text-uppercase">$6999
 					</h1>
 					<p class="text-white pt-20 pb-20">
 						Our future technology, Blockchain™ architecture, our savior Bitcoin!
 					</p>
-					<a href="#" class="primary-btn header-btn text-uppercase">Buy Bitcoin</a>
+					<a target="_blank" href="https://www.google.com.tr/search?q=buy+bitcoin" class="primary-btn header-btn text-uppercase">Buy Bitcoin</a>
 				</div>
 			</div>
 		</div>
@@ -94,7 +100,7 @@
 	<!-- End banner Area -->
 
 	<!-- Start convert Area -->
-	<section class="convert-area" id="convert">
+	<!--<section class="convert-area" id="convert">
 		<div class="container">
 			<div class="convert-wrap">
 				<div class="row justify-content-center align-items-center flex-column pb-30">
@@ -198,7 +204,7 @@
 		<div class="container">
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-9 pb-40 header-text">
-					<h1>Why choose us during purchase bitcoin</h1>
+					<h1>Why choose us during purchase CryptoCurrencies</h1>
 					<p>
 						Who are in extremely love with eco friendly system.
 					</p>
@@ -210,7 +216,7 @@
 						<h4>
 							<span class="lnr lnr-user"></span>Expert Technicians</h4>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+							Leaders in the field of cryptocurrencies
 						</p>
 					</div>
 				</div>
@@ -219,7 +225,7 @@
 						<h4>
 							<span class="lnr lnr-license"></span>Professional Service</h4>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+							Personal assistance is provided by our knowledgeable advisors
 						</p>
 					</div>
 				</div>
@@ -228,7 +234,7 @@
 						<h4>
 							<span class="lnr lnr-phone"></span>Great Support</h4>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+							We offer solutions for your 24/7 problems
 						</p>
 					</div>
 				</div>
@@ -237,7 +243,7 @@
 						<h4>
 							<span class="lnr lnr-rocket"></span>Technical Skills</h4>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+							The technical support team is always with you
 						</p>
 					</div>
 				</div>
@@ -246,7 +252,7 @@
 						<h4>
 							<span class="lnr lnr-diamond"></span>Highly Recomended</h4>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+							The preference of experts and interested
 						</p>
 					</div>
 				</div>
@@ -255,7 +261,7 @@
 						<h4>
 							<span class="lnr lnr-bubble"></span>Positive Reviews</h4>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+							We are in the process of being a guarantee of your satisfaction
 						</p>
 					</div>
 				</div>
@@ -391,10 +397,14 @@
 					</div>
 					<div class="desc">
 						<a href="#">
-							<h4>Portable Fashion for women</h4>
+							<h4>IOTA: Reinventing: Internet Of Things</h4>
 						</a>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							The focus of these articles has been on the blockchain, reinventing various industries, and disrupting the true idea of what
+							is possible in each. I have to be honest, when I first started writing about blockchain several years ago, I had no
+							idea it would reach the level it has regarding price and influence. I believed then that it had an inherently handicapped
+							state due its lack of regulation and ability to scale without slowing down, and I still stand by this and believe
+							it’s one of the major hurdles the technology faces.
 						</p>
 						<div class="user d-flex flex-row">
 							<div>
@@ -413,10 +423,13 @@
 					</div>
 					<div class="desc">
 						<a href="#">
-							<h4>Portable Fashion for women</h4>
+							<h4>Is XRP a Security?</h4>
 						</a>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							Perhaps the largest yet to draw this complaint is XRP, the third-largest cryptocurrency by value and the technology that
+							powers just one of several enterprise banking products offered by San Francisco startup Ripple. Earlier this year,
+							XRP broke out of its sideways trading, moving from around $0.30 to nearly $4. While the price soon after receded,
+							interest in Ripple is larger than ever, with a whole new captured audience cheering on its announcements and partnerships.
 						</p>
 						<div class="user d-flex flex-row">
 							<div>
@@ -435,10 +448,13 @@
 					</div>
 					<div class="desc">
 						<a href="#">
-							<h4>Portable Fashion for women</h4>
+							<h4>Ethereum Classic Is Aiming To Align With Ethereum?</h4>
 						</a>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							The DAO attack recently resulted in the Ethereum hard fork, the significance of which is still lingering and will continue
+							to do so for a long time. The reason behind this is that this attack resulted in the bifurcation of the Ethereum blockchain.
+							The newly formed chain is known Ethereum while the old chain that did not embrace was renamed as Ethereum Classic
+							(ETC). The two coins the original chain remained incompatible and lacked upgradation.
 						</p>
 						<div class="user d-flex flex-row">
 							<div>
@@ -456,44 +472,87 @@
 	</section>
 	<!-- End blog Area -->
 
-	<!-- Start login Area -->
-	<section class="login-area" id="login">
-		<div class="container">
-			<form class="modal-content animate" method="POST" action="/login">
-				<div class="imgcontainer">
-					<span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-					<img src="img/img_avatar2.png" alt="Avatar" class="avatar">
-				</div>
-				<div class="container">
-					<label for="uname">
-						<b>Username</b>
-					</label>
-					<input type="text" placeholder="Enter Username" name="username_text" required>
+	<!-- Start signup/login Area -->
+	<div class="modal" id="signup-login">
+		<div class="form">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('signup-login').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
 
-					<label for="psw">
-						<b>Password</b>
-					</label>
-					<input type="password" placeholder="Enter Password" name="password_text" required>
+			<ul class="tab-group">
+				<li class="tab active">
+					<a href="#signup">Sign Up</a>
+				</li>
+				<li class="tab">
+					<a href="#login">Log In</a>
+				</li>
+			</ul>
 
-					<button type="submit">Login</button>
-					<label>
-						<input type="checkbox" checked="checked" name="remember"> Remember me
-					</label>
+			<div class="tab-content">
+				<div id="signup">
+					<h1>Sign Up for Free</h1>
+					<form action="#" method="post">
+						<div class="top-row">
+							<div class="field-wrap">
+								<label>First Name
+									<span class="req">*</span>
+								</label>
+								<input type="text" name="firstname" required autocomplete="off" />
+							</div>
+							<div class="field-wrap">
+								<label>Last Name
+									<span class="req">*</span>
+								</label>
+								<input type="text" name="lastname" required autocomplete="off" />
+							</div>
+						</div>
+						<div class="field-wrap">
+							<label>Email Address
+								<span class="req">*</span>
+							</label>
+							<input type="email" name="e_mail" required autocomplete="off" />
+						</div>
+						<div class="field-wrap">
+							<label>Set A Password
+								<span class="req">*</span>
+							</label>
+							<input type="password" name="password" required autocomplete="off" />
+						</div>
+						<button type="submit" class="button signup" />Get Started</button>
+					</form>
 				</div>
 
-				<div class="container" style="background-color:#f1f1f1">
-					<button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
-					<span class="psw">Forgot
-						<a href="#">password?</a>
-					</span>
+				<div id="login">
+					<h1>Welcome Back!</h1>
+					<form method="post">
+						<div class="field-wrap">
+							<label>Email Address
+								<span class="req">*</span>
+							</label>
+							<input type="email" id="e_mail" name="e_mail" required autocomplete="off" />
+						</div>
+						<div class="field-wrap">
+							<label>Password
+								<span class="req">*</span>
+							</label>
+							<input type="password" id="password" name="password" required autocomplete="off" />
+						</div>
+						<p class="forgot">
+							<a href="#">Forgot Password?</a>
+						</p>
+						<input type="button" class="button login" onclick="Login()" value="Log in" />
+					</form>
 				</div>
-			</form>
+			</div>
+			<!-- tab-content -->
 		</div>
-	</section>
+		<!-- /form -->
+
+	</div>
 
 	<script>
 		// Get the modal
-		var modal = document.getElementById('login');
+		var modal = document.getElementById('signup-login');
 
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function (event) {
@@ -502,7 +561,183 @@
 			}
 		}
 	</script>
-	<!-- End login Area -->
+
+<script>
+	function Login() {
+   
+      var mail = $("#e_mail").val();
+      var pass = $("#password").val();
+    
+      if (mail == "" && pass == "") {
+        $("#e_mail").focus();
+      }
+      else if (pass == "") {
+        $("#password").focus();
+      }
+      if (pass != "" && mail != "") {
+
+        $.ajax({
+
+          'type': "POST",
+          'dataType': 'json',
+          'url': "/login",
+          'data': { e_mail: mail, password: pass },
+          'success': function (data) {
+			var obj = jQuery.parseJSON(JSON.stringify(data));
+			$('#buttonSignUp').remove();
+			$('#name').text(obj.name);
+		
+			$('#signup-login').remove();
+            console.log(obj);
+          }
+        });
+  
+      }
+
+   
+  }
+</script>
+
+	<!-- End signup/login Area -->
+	<div class="tickercontainer" style="float: left;width:-15px;height:34px;">
+		<div class="mask">
+			<ul id="WebTicker">
+				<li class="ticker-spacer" style="float: left;width:-15px;height:34px;">
+				</li>
+				<li id="bitcoin">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="BTC" alt="BTC" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/btc.svg">
+						</span>
+						<span class="name">Bitcoin(BTC)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>9260.25</span>
+						<span class="changes down">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>-1.78%</span>
+					</div>
+				</li>
+				<li id="ethereum">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="ETH" alt="ETH" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/eth.svg">
+						</span>
+						<span class="name">Ethereum(ETH)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>750.631</span>
+						<span class="changes down">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>-0.65%</span>
+					</div>
+				</li>
+				<li id="ripple">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="XRP" alt="XRP" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/xrp.svg">
+						</span>
+						<span class="name">Ripple(XRP)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>0.818861</span>
+						<span class="changes down">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>-2.35%</span>
+					</div>
+				</li>
+				<li id="bitcoin-cash">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="BCH" alt="BCH" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/bch.svg">
+						</span>
+						<span class="name">Bitcoin Cash(BCH)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>1594.78</span>
+						<span class="changes down">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>-4.18%</span>
+					</div>
+				</li>
+				<li id="litecoin">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="LTC" alt="LTC" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/ltc.svg">
+						</span>
+						<span class="name">Litecoin(LTC)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>159.725</span>
+						<span class="changes down">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>-3.63%</span>
+					</div>
+				</li>
+				<li id="cardano">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="ADA" alt="ADA" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/ada.svg">
+						</span>
+						<span class="name">Cardano(ADA)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>0.329994</span>
+						<span class="changes down">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>-2.57%</span>
+					</div>
+				</li>
+				<li id="iota">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="MIOTA" alt="MIOTA" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/miota.svg">
+						</span>
+						<span class="name">IOTA(MIOTA)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>2.42482</span>
+						<span class="changes up">
+							<i class="fa fa-arrow-up" aria-hidden="true"></i>6.99%</span>
+					</div>
+				</li>
+				<li id="monero">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="XMR" alt="XMR" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/xmr.svg">
+						</span>
+						<span class="name">Monero(XMR)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>225.426</span>
+						<span class="changes down">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>-3.72%</span>
+					</div>
+				</li>
+				<li id="dash">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="DASH" alt="DASH" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/dash.svg">
+						</span>
+						<span class="name">Dash(DASH)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>443.274</span>
+						<span class="changes down">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>-4.1%</span>
+					</div>
+				</li>
+				<li id="nem" class="last">
+					<div class="coin-container">
+						<span class="ccpw_icon">
+							<img id="XEM" alt="XEM" src="https://globalcoinreport.com/wp-content/plugins/cryptocurrency-price-ticker-widget//assets/coin-logo/xem.svg">
+						</span>
+						<span class="name">NEM(XEM)</span>
+						<span class="price">
+							<i class="fa fa-usd" aria-hidden="true"></i>0.381513</span>
+						<span class="changes down">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>-3.43%</span>
+					</div>
+				</li>
+			</ul>
+			<span class="tickeroverlay-left">&nbsp;</span>
+			<span class="tickeroverlay-right">&nbsp;</span>
+		</div>
+	</div>
+
+
+	<script>
+		$("#WebTicker").webTicker({
+			height:'40px',
+			speed: '75',
+		});
+	</script>
+
 
 
 	<!-- start footer Area -->
@@ -519,34 +754,40 @@
 				</div>
 				<div class="col-lg-6  col-md-6 col-sm-6">
 					<div class="single-footer-widget">
-						<h4 class="text-white">Newsletter</h4>
-						<p>You can trust us. we only send offers, not a single spam.</p>
+						<h4 class="text-white">Contact Us</h4>
+						<p>
+							<a href="mailto:karaeralpaslan@gmail.ccom?Subject=Hello%20again" target="_top">Send Mail to AlpaRslan</a>
+						</p>
+						<p>
+							<a href="mailto:bcberkaycelik@gmail.com?Subject=Hello%20again" target="_top">Send Mail to Berkay</a>
+						</p>
 						<div class="d-flex flex-row" id="mc_embed_signup">
-							<form class="navbar-form" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+							<!---	<form class="navbar-form" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
 							 method="get">
 								<div class="input-group add-on">
 									<input class="form-control" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
 									 required="" type="email">
 									<div style="position: absolute; left: -5000px;">
-										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-									</div>
-									<div class="input-group-btn">
-										<button class="genric-btn">
-											<span class="lnr lnr-arrow-right"></span>
-										</button>
-									</div>
-								</div>
-								<div class="info mt-20"></div>
-							</form>
+										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">-->
+						</div>
+						<div class="input-group-btn">
+							<button class="genric-btn">
+								<span class="lnr lnr-arrow-right"></span>
+							</button>
 						</div>
 					</div>
+					<div class="info mt-20"></div>
+					</form>
 				</div>
 			</div>
+		</div>
+		</div>
 
 		</div>
 	</footer>
 	<!-- End footer Area -->
 
+	<script src="js/index.js"></script>
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 	 crossorigin="anonymous"></script>
