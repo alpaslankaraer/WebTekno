@@ -17,7 +17,7 @@
     "node-coinmarketcap": "^0.2.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "socket.io": "^2.1.0",
+    "socket.io": "^2.4.0",
     "webticker": "^3.0.0"
   },
   "devDependencies": {},
